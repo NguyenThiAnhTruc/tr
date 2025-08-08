@@ -173,43 +173,22 @@ const SkillsContact: React.FC = () => {
                   </motion.div>
                   <h3 className="text-xl font-bold text-slate-800 dark:text-white transition-colors duration-300">{category.title}</h3>
                 </motion.div>
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div 
-                      key={skillIndex}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.2 + skillIndex * 0.1 + 0.4 }}
-                      viewport={{ once: true }}
-                    >
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors duration-300">{skill.name}</span>
-                        <motion.span 
-                          className="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300"
-                          initial={{ opacity: 0 }}
-                          whileInView={{ opacity: 1 }}
-                          transition={{ duration: 0.6, delay: index * 0.2 + skillIndex * 0.1 + 0.6 }}
-                          viewport={{ once: true }}
-                        >
-                          {skill.level}%
-                        </motion.span>
-                      </div>
-                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 transition-colors duration-300">
-                        <motion.div
-                          className={`bg-gradient-to-r ${category.color} h-2 rounded-full transition-all duration-500 ease-out`}
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: index * 0.2 + skillIndex * 0.1 + 0.8 }}
-                          viewport={{ once: true }}
-                        ></motion.div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+<div className="space-y-2">
+  {category.skills.map((skill, skillIndex) => (
+    <motion.div 
+      key={skillIndex}
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 + skillIndex * 0.1 + 0.4 }}
+      viewport={{ once: true }}
+    >
+      <span className="text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors duration-300">
+        • {skill.name}
+      </span>
+    </motion.div>
+  ))}
+</div>
+
       </motion.div>
 
       {/* Contact Section */}
