@@ -16,11 +16,11 @@ const SkillsContact: React.FC = () => {
       title: 'Frontend Development',
       icon: Code,
       skills: [
-        { name: 'HTML/CSS', level: 80 },
-        { name: 'JavaScript', level: 70 },
-        { name: 'React.js', level: 65 },
-        { name: 'TypeScript', level: 70 },
-        { name: 'Tailwind CSS', level: 80 }
+        { name: 'HTML/CSS' },
+        { name: 'JavaScript' },
+        { name: 'React.js' },
+        { name: 'TypeScript' },
+        { name: 'Tailwind CSS' }
       ],
       color: 'from-blue-400 to-blue-600'
     },
@@ -28,11 +28,11 @@ const SkillsContact: React.FC = () => {
       title: 'Backend Development',
       icon: Database,
       skills: [
-        { name: 'Node.js', level: 70 },
-        { name: 'Python', level: 75 },
-        { name: 'Java', level: 65 },
-        { name: 'Express.js', level: 70 },
-        { name: 'REST API', level: 65 }
+        { name: 'Node.js' },
+        { name: 'Python' },
+        { name: 'Java' },
+        { name: 'Express.js' },
+        { name: 'REST API' }
       ],
       color: 'from-green-400 to-green-600'
     },
@@ -40,10 +40,9 @@ const SkillsContact: React.FC = () => {
       title: 'Mobile & Other',
       icon: Smartphone,
       skills: [
-        { name: 'React Native', level: 60 },
-        { name: 'Git/GitHub', level: 85 },
-        { name: 'MongoDB', level: 50 },
-        { name: 'MySQL', level: 75 },
+        { name: 'React Native' },
+        { name: 'Git/GitHub'},
+        { name: 'MySQL' },
         
       ],
       color: 'from-purple-400 to-purple-600'
