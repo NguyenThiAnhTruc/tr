@@ -16,11 +16,11 @@ const SkillsContact: React.FC = () => {
       title: 'Frontend Development',
       icon: Code,
       skills: [
-        { name: 'HTML/CSS', level: 80 },
-        { name: 'JavaScript', level: 70 },
-        { name: 'React.js', level: 65 },
-        { name: 'TypeScript', level: 70 },
-        { name: 'Tailwind CSS', level: 80 }
+        { name: 'HTML/CSS' },
+        { name: 'JavaScript'},
+        { name: 'React.js' },
+        { name: 'TypeScript' },
+        { name: 'Tailwind CSS'}
       ],
       color: 'from-blue-400 to-blue-600'
     },
@@ -28,11 +28,11 @@ const SkillsContact: React.FC = () => {
       title: 'Backend Development',
       icon: Database,
       skills: [
-        { name: 'Node.js', level: 70 },
-        { name: 'Python', level: 75 },
-        { name: 'Java', level: 65 },
-        { name: 'Express.js', level: 70 },
-        { name: 'REST API', level: 65 }
+        { name: 'Node.js' },
+        { name: 'Python' },
+        { name: 'Java' },
+        { name: 'Express.js' },
+        { name: 'REST API' }
       ],
       color: 'from-green-400 to-green-600'
     },
@@ -40,10 +40,10 @@ const SkillsContact: React.FC = () => {
       title: 'Mobile & Other',
       icon: Smartphone,
       skills: [
-        { name: 'React Native', level: 60 },
-        { name: 'Git/GitHub', level: 85 },
-        { name: 'MongoDB', level: 50 },
-        { name: 'MySQL', level: 75 },
+        { name: 'React Native' },
+        { name: 'Git/GitHub' },
+        { name: 'MongoDB' },
+        { name: 'MySQL' },
         
       ],
       color: 'from-purple-400 to-purple-600'
@@ -61,8 +61,8 @@ const SkillsContact: React.FC = () => {
     {
       icon: Phone,
       title: 'Điện thoại',
-      value: '(+84) 123 456 789',
-      href: 'tel:+84123456789',
+      value: '(+84) 792 920 904',
+      href: 'tel:+84792920904',
       color: 'text-green-500'
     },
     {
@@ -175,35 +175,19 @@ const SkillsContact: React.FC = () => {
                   <h3 className="text-xl font-bold text-slate-800 dark:text-white transition-colors duration-300">{category.title}</h3>
                 </motion.div>
                 <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div 
-                      key={skillIndex}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.2 + skillIndex * 0.1 + 0.4 }}
-                      viewport={{ once: true }}
-                    >
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors duration-300">{skill.name}</span>
-                        <motion.span 
-                          className="text-sm text-slate-500 dark:text-slate-400 transition-colors duration-300"
-                          initial={{ opacity: 0 }}
-                          whileInView={{ opacity: 1 }}
-                          transition={{ duration: 0.6, delay: index * 0.2 + skillIndex * 0.1 + 0.6 }}
-                          viewport={{ once: true }}
-                        >
-                          {skill.level}%
-                        </motion.span>
-                      </div>
-                      <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 transition-colors duration-300">
-                        <motion.div
-                          className={`bg-gradient-to-r ${category.color} h-2 rounded-full transition-all duration-500 ease-out`}
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: index * 0.2 + skillIndex * 0.1 + 0.8 }}
-                          viewport={{ once: true }}
-                        ></motion.div>
-                      </div>
+  {category.skills.map((skill, skillIndex) => (
+    <motion.div 
+      key={skillIndex}
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 + skillIndex * 0.1 + 0.4 }}
+      viewport={{ once: true }}
+      className="flex items-center space-x-2"
+    >
+      <span className={`w-2 h-2 rounded-full inline-block bg-gradient-to-r ${category.color}`}></span>
+      <span className="text-sm font-medium text-slate-700 dark:text-slate-300 transition-colors duration-300">
+        {skill.name}
+      </span>  
                     </motion.div>
                   ))}
                 </div>
